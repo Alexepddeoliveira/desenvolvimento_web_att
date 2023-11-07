@@ -1,0 +1,7 @@
+header {
+    background-color: #333; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centralizar o texto */
+    padding: 20px; /* Espaçamento interno para dentro da faixa */
+    font-size: 24px; /* Tamanho da fonte */
+}
