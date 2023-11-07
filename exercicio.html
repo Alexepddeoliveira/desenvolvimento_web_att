@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Bolsas Fashion</title>
+</head>
+
+<body>
+    <p><strong>Para explorar um link externo</strong></p>
+    <button><del>Toque Aqui</del></button>
+    <a href="https://www.example.com"><button>Clique Aqui</button></a>
+    
+    <p><em>Para navegar até um link interno</em></p>
+    <a href="#bolsas"><ins>Ir para a seção de Bolsas</ins></a>
+    <br><br>
+    <section id="bolsas">
+        <img src="Imagens/bolsa.jpg" height="250" width="320">
+        <br>
+        <a href="https://www.example.com/bolsa-imagem"><button>Imagem de uma Bolsa</button></a>
+        <br><br>
+        <audio controls src="Audios/MusicaBolsa.mp3"></audio>
+        <br><br>
+        <video height="250" width="320" controls src="Videos/VideoBolsa.mp4"></video>
+    </section>
+    <br>
+    <hr>
+
+    <h1>Exemplo de Formulário com Método GET</h1>
+    <form method="get">
+        <fieldset>
+            <legend>Insira suas informações:</legend>
+            <div>
+                <label for="nome">Digite seu nome:</label>
+                <input type="text" name="nome">
+            </div>
+
+            <div>
+                <label for "sobrenome">Digite seu sobrenome:</label>
+                <input type="text" name="sobrenome">
+            </div>
+
+            <div>
+                <label for="email">Digite seu e-mail:</label>
+                <input type="text" name="email">
+            </div>
+
+            <div>
+                <label for="data">Selecione uma data:</label>
+                <input type="date" name="data">
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <label>Qual é o seu estilo de bolsa favorito?</label>
+            <label>
+                <input type="radio" name="estilo" value="clutch" checked>Clutch
+            </label>
+            <label>
+                <input type="radio" name="estilo" value="tote">Tote
+            </label>
+            <label>
+                <input type="radio" name="estilo" value="crossbody">Crossbody
+            </label>
+        </div>
+        <br>
+        <div>
+            <label for="cor">Selecione sua cor favorita:</label>
+            <select id="cor">
+                <option selected disabled value="">Escolha uma opção</option>
+                <option>Preto</option>
+                <option>Marrom</option>
+                <option>Vermelho</option>
+            </select>
+        </div>
+        <br>
+        <fieldset>
+            <div>
+                <label>Escolha suas marcas de bolsa favoritas:</label>
+                <input type="checkbox" name="marca1" value="Louis Vuitton">
+                <label for="marca1">Louis Vuitton</label>
+                <input type="checkbox" name="marca2" value="Gucci">
+                <label for="marca2">Gucci</label>
+                <input type="checkbox" name="marca3" value="Chanel">
+                <label for="marca3">Chanel</label>
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <label>Conte-nos o que você mais gosta sobre bolsas:</label>
+            <textarea rows="6" style="width: 26em;" name="caracteristicas"></textarea>
+        </div>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h1>Exemplo de Formulário com Método POST</h1>
+    <form method="post">
+        <fieldset>
+            <legend>Insira suas informações:</legend>
+            <div>
+                <label for="nome">Digite seu nome:</label>
+                <input type="text" name="nome">
+            </div>
+
+            <div>
+                <label for="sobrenome">Digite seu sobrenome:</label>
+                <input type="text" name="sobrenome">
+            </div>
+
+            <div>
+                <label for="email">Digite seu e-mail:</label>
+                <input type="text" name="email">
+            </div>
+
+            <div>
+                <label for="data">Selecione uma data:</label>
+                <input type="date" name="data">
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <label>Qual é o seu estilo de bolsa favorito?</label>
+            <label>
+                <input type="radio" name="estilo" value="clutch" checked>Clutch
+            </label>
+            <label>
+                <input type="radio" name="estilo" value="tote">Tote
+            </label>
+            <label>
+                <input type="radio" name="estilo" value="crossbody">Crossbody
+            </label>
+        </div>
+        <br>
+        <div>
+            <label for="cor">Selecione sua cor favorita:</label>
+            <select id="cor">
+                <option selected disabled value="">Escolha uma opção</option>
+                <option>Preto</option>
+                <option>Marrom</option>
+                <option>Vermelho</option>
+            </select>
+        </div>
+        <br>
+        <fieldset>
+            <div>
+                <label>Escolha suas marcas de bolsa favoritas:</label>
+                <input type="checkbox" name="marca1" value="Louis Vuitton">
+                <label for="marca1">Louis Vuitton</label>
+                <input type="checkbox" name="marca2" value="Gucci">
+                <label for "marca2">Gucci</label>
+                <input type="checkbox" name="marca3" value="Chanel">
+                <label for="marca3">Chanel</label>
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <label>Conte-nos o que você mais gosta sobre bolsas:</label>
+            <textarea rows="6" style="width: 26em;" name="caracteristicas"></textarea>
+        </div>
+        <br>
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
