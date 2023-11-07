@@ -1,50 +1,41 @@
-const primeiroValor = 6;
-let segundoValor = "loja";
-const listaValores = ['loja', 'abacaxi', 2];
-let quartaVariavel;
+const autor = "J.K. Rowling";
+let titulo = "Harry Potter e a Pedra Filosofal";
+const generos = ['Fantasia', 'Aventura', 'Magia'];
+let resenha;
 
-console.log("Valor inicial + 1: " + (primeiroValor + 1));
+console.log("Autor do livro: " + autor);
 
-segundoValor += " rosa";
-console.log("Segundo valor após concatenação: " + segundoValor);
+titulo += " (Livro 1)";
+console.log("Título do livro após a adição do número: " + titulo);
 
-console.log("Lista de valores: " + listaValores);
-console.log("Tamanho da lista: " + listaValores.length);
-console.log("Primeiro item da lista: " + listaValores[0]);
-console.log("Adicionando 'blusa' à lista. Novo tamanho: " + listaValores.push('blusa'));
-console.log("Lista atualizada: " + listaValores);
-console.log("Substituindo o item na posição 3 com 'bolsa'. Lista atualizada: " + (listaValores[3] = 'bolsa'));
-console.log("Atualizando o item na posição 15 com 'maçã'. Lista atualizada: " + (listaValores[15] = 'maçã'));
-console.log("Lista final: " + listaValores);
+console.log("Gêneros do livro: " + generos);
+console.log("Número de gêneros: " + generos.length);
+console.log("Primeiro gênero: " + generos[0]);
 
-quartaVariavel = { primeiro: 1, segundo: "tudo" };
-console.log("Quarta variável: " + quartaVariavel);
-console.log("Valor da propriedade 'primeiro' da quarta variável: " + quartaVariavel.primeiro);
-quartaVariavel.terceiro = "nada";
-console.log("Valor da propriedade 'terceiro' da quarta variável: " + quartaVariavel.terceiro);
+console.log("Adicionando 'Mistério' aos gêneros. Novo número de gêneros: " + generos.push('Mistério'));
+console.log("Gêneros atualizados: " + generos);
 
-function minhaFuncao(entrada) {
-  return entrada + 2;
+console.log("Substituindo o gênero na posição 3 com 'Ação'. Gêneros atualizados: " + (generos[3] = 'Ação'));
+
+console.log("Resenha do livro: " + resenha);
+
+function escreverResenha(texto) {
+  resenha = texto;
+  console.log("Resenha atualizada: " + resenha);
 }
 
-console.log("Resultado da função para 6: " + minhaFuncao(6));
-console.log("Resultado da função para '1': " + minhaFuncao('1'));
+escreverResenha("Um livro incrível que nos transporta para um mundo de magia e aventuras.");
 
-const minhaOutraFuncao = function (entrada) {
-  return entrada + 3;
+const outraResenha = (texto) => {
+  resenha = texto;
+  console.log("Outra resenha atualizada: " + resenha);
 }
 
-console.log("Resultado da outra função para 6: " + minhaOutraFuncao(6));
-console.log("Resultado da outra função para '1': " + minhaOutraFuncao('1'));
+outraResenha("Uma obra-prima da literatura que cativa leitores de todas as idades.");
 
-const seta = (entrada) => {
-  return entrada + 4;
+const terceiraResenha = (texto) => {
+  resenha = texto;
+  console.log("Terceira resenha atualizada: " + resenha);
 }
 
-console.log("Resultado da função de seta para 6: " + seta(6));
-console.log("Resultado da função de seta para '1': " + seta('1'));
-
-const outraSeta = (entrada) => entrada + 5;
-
-console.log("Resultado da outra função de seta para 6: " + outraSeta(6));
-console.log("Resultado da outra função de seta para '1': " + outraSeta('1'));
+terceiraResenha("Um clássico que nunca envelhece, com personagens memoráveis e uma história envolvente.");
