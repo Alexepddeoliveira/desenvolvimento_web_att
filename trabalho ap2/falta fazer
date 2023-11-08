@@ -1,0 +1,17 @@
+Funcionalidades a se verificar 
+- É preciso usar armazenamento local para viabilizar a solução de autorização
+- O trabalho deve ser publicado no githubPages com acesso público
+- não é obrigatório usar URL personalizada, mas se quiser pode 😎
+- Responsividade:
+- Página de Login:
+- vertical até 768px;
+- Página Detalhes:
+- vertical até 768px;
+- Container de atletas da Página Principal:
+- uma colunas até 768px;
+- duas colunas até 1024px;
+- quatro colunas depois de 1024px;
+- largura máxima da lista de 1200px;
+- Seleção de elenco da Página Principal:
+- select até 768px;
+- botões para viewports maiores que 768px;
