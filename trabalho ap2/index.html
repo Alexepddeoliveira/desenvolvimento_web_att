@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>botafogo-atletas</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="feminino.js"></script>
-  <script src="codigo.js" defer></script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/escudo.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Senha</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-      <h1>Botafogo</h1>
+    <h1 class="title-with-image">
+        <img src="escudo.png" alt="" width="100"> Botafogo
+    </h1>
   </header>
-  <div id="container">
-      <div id="container_atleta">
-          <h3 id="nome"></h3>
-          <img>
-          <p></p>
-      </div>
-  </div>
+    <h1>Digite a senha ("senha")</h1>
+    <form>
+        Senha: <input type="password" id="senha" onkeypress="verificarTecla(event)">
+        <input type="button" value="Enviar" onclick="verificarSenhaERedirecionar()">
+    </form>
 </body>
 </html>
