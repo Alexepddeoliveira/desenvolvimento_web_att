@@ -14,11 +14,13 @@
     <h1 class="title-with-image">
         <img src="escudo.png" alt="" width="100"> Botafogo
     </h1>
-  </header>
-    <h1>Digite a senha ("senha")</h1>
-    <form>
-        Senha: <input type="password" id="senha" onkeypress="verificarTecla(event)">
-        <input type="button" value="Enviar" onclick="verificarSenhaERedirecionar()">
-    </form>
+</header>
+    <div class="login-container">
+        <h6>Digite a senha ("senha")</h6>
+        <form>
+            <input type="password" id="senha" placeholder="Senha" onkeypress="verificarTecla(event)">
+            <input type="button" id="enviar" value="Enviar" onclick="verificarSenhaERedirecionar()">
+        </form>
+    </div>
 </body>
 </html>
