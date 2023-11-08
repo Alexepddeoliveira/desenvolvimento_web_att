@@ -45,7 +45,7 @@ input[type="button"] {
 }
 
 .atleta-card {
-    width: 20%; /* Define o tamanho de cada card de atleta */
+    width: 30%; /* Define o tamanho de cada card de atleta */
     margin: 10px;
     text-align: center;
     position: relative;
@@ -57,7 +57,8 @@ input[type="button"] {
 }
 
 .atleta-img {
-    width: 1%; /* Garante que a imagem se ajuste ao tamanho do card */
+    width: 100%; /* Garante que a imagem se ajuste ao tamanho do card */
+    max-height: 100%; /* Altura máxima da imagem */
     transition: transform 0.3s;
 }
 
