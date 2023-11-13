@@ -1,9 +1,11 @@
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos gerais da página */
 body {
     background: url('backgrounA.jpg');
     background-size: cover;
@@ -22,7 +24,15 @@ body {
 h1 {
     font-size: 150px;
 }
-h4{
+
+h1.title-with-image img {
+    /* Estilos específicos para a imagem dentro de h1.title-with-image */
+    width: 10%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h4 {
     color: #fff;
     margin-top: 10%;
 }
@@ -58,6 +68,37 @@ button {
     margin-right: 2%;
 }
 
+/* Responsividade dos Botões de Elenco */
+#botoesElenco button {
+    padding: 2vw 4vw; /* Tamanho original dos botões */
+    margin: 1vw;
+    cursor: pointer;
+    width: 80%;
+    max-width: 1200px; /* Largura máxima dos botões */
+    box-sizing: border-box;
+}
+
+/* Diminui um pouco para telas maiores */
+@media (min-width: 769px) {
+    #botoesElenco button {
+        padding: 1.5vw 3vw; /* Ajuste conforme necessário */
+    }
+}
+
+/* Diminui ainda mais para telas maiores */
+@media (min-width: 1025px) {
+    #botoesElenco button {
+        padding: 1vw 2vw; /* Ajuste conforme necessário */
+    }
+}
+
+/* Tamanho mínimo para telas muito grandes */
+@media (min-width: 1200px) {
+    #botoesElenco button {
+        padding: 0.5vw 1vw; /* Ajuste conforme necessário */
+    }
+}
+
 /* Estilos para o header */
 header {
     background-color: #333;
@@ -74,14 +115,12 @@ header {
 
 /* Estilos para o layout das imagens dos atletas */
 .elenco-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    gap: 20px;
     justify-content: space-around;
 }
 
 .atleta-card {
-    width: 20%;
-    margin: 10px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -119,46 +158,96 @@ header {
     transform: translateY(0);
 }
 
+/* Uma coluna até 768px */
+@media (max-width: 768px) {
+    .elenco-container {
+        grid-template-columns: 1fr;
+    }
 
-/* Container de atletas da Página Principal */
-.elenco-container .atleta-card {
-    width: 100%;
+    header {
+        font-size: 6vw;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
 }
 
 /* Duas colunas até 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .elenco-container .atleta-card {
-        width: 48%;
+    .elenco-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        font-size: 4vw;
+    }
+
+    h1 {
+        font-size: 100px;
     }
 }
 
 /* Quatro colunas depois de 1024px */
 @media (min-width: 1025px) {
-    .elenco-container .atleta-card {
-        width: 23%;
-    }
-}
-
-/* Largura máxima da lista de 1200px */
-@media (min-width: 1200px) {
     .elenco-container {
+        grid-template-columns: repeat(4, 1fr);
         max-width: 1200px;
         margin: auto;
     }
-}
 
-/* elenco da Página Principal */
-/* Select até 768px */
-@media (max-width: 768px) {
-    select {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-/*Responsividade do Header */
-@media (max-width: 768px) {
     header {
-        font-size: 6vw;
+        font-size: 3vw;
     }
+}
+/* detalhes.html*/
+
+.detalhes-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detalhes-jogador {
+    text-align: left;
+    flex: 1; /* A primeira parte ocupa o máximo de espaço possível */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.detalhes-jogador h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.detalhes-jogador img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    display: block;
+    object-fit: contain;
+}
+
+.detalhes-jogador p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+/* Botão de voltar */
+#btnVoltar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#btnVoltar:hover {
+    background-color: #555;
 }
