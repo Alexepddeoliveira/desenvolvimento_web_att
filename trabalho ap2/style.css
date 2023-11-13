@@ -202,22 +202,32 @@ header {
 }
 /* detalhes.html*/
 
+body.detalhes-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
 .detalhes-container {
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 20px;
+}
+
+.detalhes-imagem {
+    padding: 20px;
+    text-align: center;
 }
 
 .detalhes-jogador {
-    text-align: left;
-    flex: 1; /* A primeira parte ocupa o máximo de espaço possível */
-    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    padding: 20px;
 }
 
 .detalhes-jogador h2 {
@@ -229,13 +239,14 @@ header {
     width: 100%;
     height: auto;
     max-height: 300px;
-    display: block;
     object-fit: contain;
+    display: block;
 }
 
 .detalhes-jogador p {
     font-size: 1em;
     margin-bottom: 10px;
+    text-align: left; /* Adicionado para alinhar o texto à esquerda */
 }
 
 /* Botão de voltar */

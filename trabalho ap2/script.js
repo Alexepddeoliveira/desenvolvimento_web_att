@@ -114,11 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Se o ID do jogador estiver presente na URL, buscar detalhes
     if (jogadorId) {
-        mostrarDetalhesJogadorPorId(jogadorId);
+        mostrarDetalhesPorId(jogadorId);
     }
 
-    // Função para mostrar os detalhes do jogador com base no ID
-    function mostrarDetalhesJogadorPorId(jogadorId) {
+    // Função para mostrar os detalhes do jogador e da imagem com base no ID
+    function mostrarDetalhesPorId(jogadorId) {
         // Fazer uma solicitação à API para obter detalhes específicos do jogador por ID
         fetch(`https://botafogo-atletas.mange.li/${encodeURIComponent(jogadorId)}`)
             .then(response => {
@@ -142,15 +142,25 @@ document.addEventListener("DOMContentLoaded", function () {
                         <h2>${data.nome}</h2>
                         <p>Elenco: ${data.elenco || 'N/A'}</p>
                         <p>Posição: ${data.posicao || 'N/A'}</p>
-                        <img src="${data.imagem || ''}" alt="${data.nome}">
                         <p>${data.descricao || 'N/A'}</p>
                         <p>Nome Completo: ${data.nome_completo || 'N/A'}</p>
                         <p>Nascimento: ${data.nascimento || 'N/A'}</p>
                         <p>Altura: ${data.altura || 'N/A'}</p>
                     `;
 
-                    // Adicionar detalhes à página de detalhes
+                    // Adicionar detalhes do jogador à página de detalhes
                     detalhesContainer.appendChild(detalhesJogador);
+
+                    // Criar elementos HTML para exibir detalhes da imagem
+                    const detalhesImagem = document.createElement('div');
+                    detalhesImagem.className = 'detalhes-imagem';
+
+                    detalhesImagem.innerHTML = `
+                        <img src="${data.imagem || ''}" alt="${data.nome}">
+                    `;
+
+                    // Adicionar detalhes da imagem à página de detalhes
+                    detalhesContainer.appendChild(detalhesImagem);
                 } else {
                     throw new Error('Dados do jogador não encontrados ou incompletos.');
                 }
