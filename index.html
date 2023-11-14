@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/escudo.png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificação de Senha</title>
+    <title>Pagina de login</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <h1 class="title-with-image">
-        <img src="escudo.png" alt="" width="100"> Botafogo
-    </h1>
-</header>
+    <header>
+        <h1 class="title-with-image">
+            <img src="escudo.png" alt="" width="100"> Botafogo
+        </h1>
+    </header>
+    
     <div class="login-container">
         <h4>Digite a senha ("senha")</h4>
         <form>
-            <input type="password" id="senha" placeholder="Senha" onkeypress="verificarTecla(event)">
-            <input type="button" id="enviar" value="Enviar" onclick="verificarSenhaERedirecionar()">
+            <input type="password" id="senha" placeholder="Senha" onkeydown="verificarTecla(event)">
+            <button type="button" onclick="verificarSenhaERedirecionar()">Enviar</button>
         </form>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,26 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+    function limparCookies() {
+        var cookies = document.cookie.split(";");
+    
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var nome = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = nome + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }
+    const btnSair = document.getElementById("btnSair");
+
+    if (btnSair) {
+        btnSair.addEventListener("click", function () {
+            // Redirecionar para a página de login e substituir a entrada no histórico
+            location.replace("index.html");
+            limparCookies();
+        });
+    }
+});
+
 // Função para verificar a senha e redirecionar para a página inicial
 function verificarSenhaERedirecionar() {
     const senhaDigitada = document.getElementById('senha').value;
@@ -18,6 +41,13 @@ function verificarTecla(event) {
     }
 }
 
+// Adicionar listener ao botão de enviar para verificar a senha
+const btnEnviar = document.querySelector('button');
+if (btnEnviar) {
+    btnEnviar.addEventListener("click", function () {
+        verificarSenhaERedirecionar();
+    });
+}
 // EventListener para aguardar o carregamento do DOM antes de executar as funções
 document.addEventListener("DOMContentLoaded", function () {
     // Botões para carregar o elenco com base no gênero
