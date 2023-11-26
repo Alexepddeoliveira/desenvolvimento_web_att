@@ -78,24 +78,24 @@ button {
     box-sizing: border-box;
 }
 
-/* Diminui um pouco para telas maiores */
+/* responsividade */
 @media (min-width: 769px) {
     #botoesElenco button {
-        padding: 1.5vw 3vw; /* Ajuste conforme necessário */
+        padding: 1.5vw 3vw;
     }
 }
 
-/* Diminui ainda mais para telas maiores */
+
 @media (min-width: 1025px) {
     #botoesElenco button {
-        padding: 1vw 2vw; /* Ajuste conforme necessário */
+        padding: 1vw 2vw; 
     }
 }
 
-/* Tamanho mínimo para telas muito grandes */
+
 @media (min-width: 1200px) {
     #botoesElenco button {
-        padding: 0.5vw 1vw; /* Ajuste conforme necessário */
+        padding: 0.5vw 1vw; 
     }
 }
 
